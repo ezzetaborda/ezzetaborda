@@ -1,0 +1,437 @@
+/* INDEX.HTML */
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+/* FONTS */
+
+    /* RUBIK:
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Rubik', sans-serif; 
+    font-family: 'Roboto', sans-serif; */
+
+
+/*----------------------- TEXTOS-----------------------*/  
+    
+h1{
+    font-size: 30px;
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: black;
+    background-color: rgb(255, 81, 0);
+    width: 100%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+h2{
+    font-size: 25px;
+    font-family: 'Rubik', sans-serif;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+p{
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*----------------------- GRID AREA-----------------------*/  
+body{
+    background-color: #030011;
+}
+.bodydiv {
+    display: grid;
+    background-color: #030011;
+    grid-template-columns: 1fr;
+    gap: 20px 0px;
+    grid-template-rows: 1.5fr 1.6fr 1fr 2fr 0.8fr 0.8fr 2fr 0.8fr;
+    grid-template-areas: 
+      "header"
+      "section0"
+      "section1"
+      "section2"
+      "section3"
+      "section4"
+      "section5"
+      "footer";
+    }
+
+
+    
+
+    /*----------------------- header -----------------------*/
+
+
+.header{
+    grid-area: header;
+    background-color: #000a23;
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header div{
+    display: flex;
+    background-image: url(../multimedia/images/logo\ influteniente.png);
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+}
+.header nav ul{
+    list-style: none;
+    display: flex;
+    background-color: #153f59;
+    border: 2px solid #02152b;
+}
+.header nav ul li{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 3px;
+}
+.header nav ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+    color: floralwhite;
+}
+.header nav ul li a:hover{
+    color: rgb(255, 204, 128);
+}
+
+        /*----------------------- SECTION0-----------------------*/
+
+.section0{
+    background-color: #021d34;
+    grid-area: section0;
+    display: flex;
+    margin: 3px;
+    align-items: center;
+    flex-direction: column;
+}
+.section0 div{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 1100px;
+
+}
+.section0 div div{
+    height: 300px;
+    width: 300px;
+    margin: 30px;
+    background-color: cadetblue;
+}
+
+        /*----------------------- SECTION1-----------------------*/
+
+
+.section1{
+    grid-area: section1;
+    background-color: #ff3c00;
+    display: flex;
+    flex-direction: column;
+    margin: 3px;
+    padding: 10px;
+}
+
+
+        /*----------------------- SECTION2-----------------------*/
+
+
+.section2{
+    grid-area: section2;
+    background-color: #021d34;
+    margin: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.section2 div{
+    margin: 2px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+
+}
+.section2 div div{
+    position: relative;
+    height: 400px;
+    width: 300px;
+    margin: 30px;
+    background-color: cadetblue;
+}
+.section2 h2{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+
+        /*----------------------- SECTION3-----------------------*/
+
+.section3{
+    grid-area: section3;
+    display: flex;
+    flex-direction: column;
+    background-color: #ff3c00;
+    margin: 3px;
+    padding: 10px;
+
+}
+
+
+        /*----------------------- SECTION4-----------------------*/
+
+.section4{
+    grid-area: section4;
+    background-color: #ff3c00;
+    display: flex;
+    flex-direction: column;
+    margin: 3px;
+    padding: 10px;
+}
+
+        /*----------------------- SECTION5-----------------------*/
+
+.section5{
+    grid-area: section5;
+    display: flex;
+    background-color: #021d34;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 3px;
+}
+.section5 div{
+    display: flex;
+    flex-direction: row;
+}
+.section5 div div{
+    position: relative;
+    height: 400px;
+    width: 300px;
+    margin: 30px;
+    background-color: cadetblue;
+}
+.section5 h2{
+    align-self: center;
+}
+
+
+
+
+/* --------------- ../PAGES --------------- */ /* --------------- GRIDS2.0 --------------- */
+
+
+/* --------------- SECTION 1 TW E IG ----------------------------------------------------- */
+.igtwsections {  
+    display: grid;
+    padding: 5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 20px 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "section1pages section1pages"
+      "igtwsection2 igtwsection3"
+      "igtwsection4 igtwsection4"
+      "igtwsection5 igtwsection5";
+  }
+  
+
+.igtwsection1{
+    grid-area: section1pages;
+    background-color: #021d34;
+    display: flex;
+    margin: 3px;
+    align-items: center;
+    flex-direction: column;
+}
+.igtwsection1 div{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 1100px;  
+
+}
+.igtwsection1 div div{
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    background-color: cadetblue;
+}
+
+/* --------------- SECTION 2 ------------------------------------------------------ */
+
+.igtwsection2 { 
+    grid-area: igtwsection2;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #021d34;
+
+}
+
+.igtwsection2 ul li{
+    list-style: none;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    color: #ff3c00;
+}
+
+/* --------------- SECTION 3 ------------------------------------------------------ */
+
+.igtwsection3 { 
+    grid-area: igtwsection3;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #021d34;
+}
+.igtwsection3 ul li{
+    list-style: none;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    color: #ff3c00;
+}
+
+/* --------------- SECTION 4 ------------------------------------------------------ */
+
+.igtwsection4 { 
+    grid-area: igtwsection4;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ff3c00;
+
+}
+
+/* --------------- SECTION 5 ------------------------------------------------------ */
+
+.igtwsection5 { 
+    grid-area: igtwsection5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ff3c00;
+}
+
+
+/*-------------- CONTACTO.HTML ------------------*/
+.divform{
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+    height: 200px;
+    background-color: #000a23;
+}
+
+.divform label{
+    font-family: 'Oswald', sans-serif;
+    color: aliceblue;
+}
+.divform input{
+    margin-left: 100px;
+}
+
+    /*----------------------- FOOTER -----------------------*/
+
+.footer{
+    grid-area: footer;
+    background-color: #000a23;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    
+}
+.footer ul{
+    list-style: none;
+}
+.footer ul li a{
+    color: floralwhite;
+    text-decoration: wavy;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+
+}
+.footer div{
+    display: flex;
+
+}
+.footer div a{
+    margin: 5px;
+    height: 60px;
+    width: 60px;
+    
+}
+.igicon{
+    background-image: url(../multimedia/images/instagram.png);
+    background-size: cover;
+
+}
+.twicon{
+    background-image: url(../multimedia/images/twitter.png);
+    background-size: cover;
+}
+.wpicon{
+    background-image: url(../multimedia/images/whatsapp.png);
+    background-size: cover;
+}
+
+@media (max-width: 700px) {
+    .section0 div{
+       flex-direction: column;
+    }
+
+    .section1{
+        align-items: center;
+        padding: 10px ;
+        justify-content: center;
+    }
+    .section2{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section2 div{
+        flex-direction: column;
+    }
+    .section3{
+        align-items: center;
+        padding: 10px ;
+        justify-content: center;
+    }
+    .section4{
+        align-items: center;
+        padding: 10px ;
+        justify-content: center;
+    }
+    .section5 div{
+        flex-direction: column;
+    }
+
+    .footer{
+        justify-content: center;
+    }
+    .footer div{
+        flex-direction: column;
+        margin-left: 20px;
+    }
+    
+}
