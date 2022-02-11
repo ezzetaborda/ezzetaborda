@@ -39,6 +39,7 @@ h2{
 p{
     font-size: 22px;
     font-family: 'Roboto', sans-serif;
+    margin: 10px;
 }
 
 /*----------------------- GRID AREA-----------------------*/  
@@ -50,7 +51,7 @@ body{
     background-color: #030011;
     grid-template-columns: 1fr;
     gap: 20px 0px;
-    grid-template-rows: 1.5fr 1.6fr 1fr 2fr 0.8fr 0.8fr 2fr 0.8fr;
+    grid-template-rows: 1fr 1.6fr 1fr 2fr 0.8fr 0.8fr 2fr 0.8fr;
     grid-template-areas: 
       "header"
       "section0"
@@ -111,6 +112,7 @@ body{
 
 .section0{
     background-color: #021d34;
+    width: 100vw;
     grid-area: section0;
     display: flex;
     margin: 3px;
@@ -122,9 +124,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
-    width: 1100px;
-
 }
 .section0 div div{
     height: 300px;
@@ -138,6 +137,7 @@ body{
 
 .section1{
     grid-area: section1;
+    width: 100vw;
     background-color: #ff3c00;
     display: flex;
     flex-direction: column;
@@ -151,11 +151,12 @@ body{
 
 .section2{
     grid-area: section2;
+    width: 100vw;
     background-color: #021d34;
     margin: 3px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
 }
 .section2 div{
     margin: 2px;
@@ -183,6 +184,7 @@ body{
 
 .section3{
     grid-area: section3;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     background-color: #ff3c00;
@@ -196,6 +198,7 @@ body{
 
 .section4{
     grid-area: section4;
+    width: 100vw;
     background-color: #ff3c00;
     display: flex;
     flex-direction: column;
@@ -208,6 +211,7 @@ body{
 .section5{
     grid-area: section5;
     display: flex;
+    width: 100vw;
     background-color: #021d34;
     align-items: center;
     justify-content: center;
@@ -253,6 +257,7 @@ body{
 
 .igtwsection1{
     grid-area: section1pages;
+    width: 100vw;
     background-color: #021d34;
     display: flex;
     margin: 3px;
@@ -264,12 +269,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
-    width: 1100px;  
 
 }
 .igtwsection1 div div{
-    position: relative;
+
     height: 200px;
     width: 200px;
     margin: 20px;
@@ -315,6 +318,7 @@ body{
 .igtwsection4 { 
     grid-area: igtwsection4;
     display: flex;
+    width: 100vw;
     align-items: center;
     flex-direction: column;
     background-color: #ff3c00;
@@ -326,6 +330,7 @@ body{
 .igtwsection5 { 
     grid-area: igtwsection5;
     display: flex;
+    width: 100vw;
     flex-direction: column;
     align-items: center;
     background-color: #ff3c00;
@@ -353,6 +358,7 @@ body{
 
 .footer{
     grid-area: footer;
+    width: 100vw;
     background-color: #000a23;
     display: flex;
     justify-content: space-between;
@@ -394,7 +400,9 @@ body{
     background-size: cover;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1020px) {
+
+
     .section0 div{
        flex-direction: column;
     }
@@ -426,12 +434,27 @@ body{
         flex-direction: column;
     }
 
+
+}
+
+@media (max-width: 920px){
+    .igtwsection1 div{
+    flex-direction: column;
+    }
+}
+
+@media (max-width: 500px){
+    .header nav ul{
+
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 300px){
     .footer{
         justify-content: center;
     }
     .footer div{
         flex-direction: column;
         margin-left: 20px;
-    }
-    
 }
