@@ -22,7 +22,7 @@ h1{
     text-transform: uppercase;
     -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: black;
-    background-color: rgb(255, 81, 0);
+    background-image: linear-gradient( #ff3c00 , #b63400);
     width: 100%;
     align-self: center;
     display: flex;
@@ -111,7 +111,7 @@ body{
         /*----------------------- SECTION0-----------------------*/
 
 .section0{
-    background-color: #021d34;
+    background-image: linear-gradient(#04233d , #021d34 );
     width: 100vw;
     grid-area: section0;
     display: flex;
@@ -132,13 +132,18 @@ body{
     background-color: cadetblue;
 }
 
+.section0 div div:hover{
+    transition: all 1s;
+    height: 350px;
+    width: 350px;
+}
         /*----------------------- SECTION1-----------------------*/
 
 
 .section1{
     grid-area: section1;
     width: 100vw;
-    background-color: #ff3c00;
+    background-image: linear-gradient( #ff3c00 , #b63400);
     display: flex;
     flex-direction: column;
     margin: 3px;
@@ -152,7 +157,7 @@ body{
 .section2{
     grid-area: section2;
     width: 100vw;
-    background-color: #021d34;
+    background-image: linear-gradient(#052a49 , #021d34 );
     margin: 3px;
     display: flex;
     align-items: center;
@@ -167,11 +172,15 @@ body{
 
 }
 .section2 div div{
-    position: relative;
     height: 400px;
     width: 300px;
     margin: 30px;
     background-color: cadetblue;
+}
+.section2 div div:hover{
+    transition: all 1s;
+    height: 475px;
+    width: 350px;
 }
 .section2 h2{
     display: flex;
@@ -187,7 +196,7 @@ body{
     width: 100vw;
     display: flex;
     flex-direction: column;
-    background-color: #ff3c00;
+    background-image: linear-gradient( #ff3c00 , #ce4a16);
     margin: 3px;
     padding: 10px;
 
@@ -199,7 +208,7 @@ body{
 .section4{
     grid-area: section4;
     width: 100vw;
-    background-color: #ff3c00;
+    background-image: linear-gradient( #ff3c00 , #bd4516);
     display: flex;
     flex-direction: column;
     margin: 3px;
@@ -212,7 +221,7 @@ body{
     grid-area: section5;
     display: flex;
     width: 100vw;
-    background-color: #021d34;
+    background-image: linear-gradient(#042441 , #021d34 );
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -223,11 +232,15 @@ body{
     flex-direction: row;
 }
 .section5 div div{
-    position: relative;
     height: 400px;
     width: 300px;
     margin: 30px;
     background-color: cadetblue;
+}
+.section5 div div:hover{
+    transition: all 0.8s;
+    height: 475px;
+    width: 350px;
 }
 .section5 h2{
     align-self: center;
@@ -278,7 +291,11 @@ body{
     margin: 20px;
     background-color: cadetblue;
 }
-
+.igtwsection1 div div:hover{
+    transition: all 0.6s;
+    height: 250px;
+    width: 250px;
+}
 /* --------------- SECTION 2 ------------------------------------------------------ */
 
 .igtwsection2 { 
@@ -376,6 +393,11 @@ body{
     text-transform: uppercase;
 
 }
+.footer ul li a:hover{
+    transition: all 0,2;
+    color: rgb(235, 88, 88);
+
+}
 .footer div{
     display: flex;
 
@@ -400,6 +422,8 @@ body{
     background-size: cover;
 }
 
+    /*----------------------- MEDIA QUERIES -----------------------*/
+    
 @media (max-width: 1020px) {
 
 
@@ -442,6 +466,7 @@ body{
     flex-direction: column;
     }
 }
+
 
 @media (max-width: 500px){
     .header nav ul{
