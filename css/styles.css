@@ -75,38 +75,39 @@ body{
     display: flex;
     width: 100vw;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
-.header div{
+.logo{
     display: flex;
     background-image: url(../multimedia/images/logo\ influteniente.png);
     background-size: cover;
     height: 200px;
     width: 200px;
 }
-.header nav ul{
-    list-style: none;
+        /*----------------------- NAVBAR-----------------------*/
+
+.navbar{
+    width: 99vw;
     display: flex;
-    background-color: #153f59;
-    border: 2px solid #02152b;
+    justify-content: right;
 }
-.header nav ul li{
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 3px;
+.navbar-brand{
+    margin: 20px;
 }
-.header nav ul li a{
-    text-decoration: none;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-    font-style: italic;
+.navbar ul li a{
     text-transform: uppercase;
-    color: floralwhite;
+    font-family: 'Rubik', sans-serif;
+    color: #ffd5c8;
+    list-style: none;
 }
-.header nav ul li a:hover{
-    color: rgb(255, 204, 128);
+.navbar a{
+    color: #ffffff;
+    font-family: 'Rubik', sans-serif;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(48, 47, 46);
 }
+
 
         /*----------------------- SECTION0-----------------------*/
 
@@ -126,10 +127,7 @@ body{
     align-items: center;
 }
 .section0 div div{
-    height: 300px;
-    width: 300px;
     margin: 30px;
-    background-color: cadetblue;
 }
 
 .section0 div div:hover{
@@ -351,22 +349,33 @@ body{
 
 
 /*-------------- CONTACTO.HTML ------------------*/
-.divform{
+.contenedorForm{
+    width: 100vw;
+    min-height: 200px;
     display: flex;
-    justify-content: space-around;
-    width: 500px;
-    height: 200px;
+    justify-content: center;
     background-color: #000a23;
 }
-
-.divform label{
-    font-family: 'Oswald', sans-serif;
-    color: aliceblue;
+form{
+    display: flex;
+    flex-direction: column;
 }
-.divform input{
-    margin-left: 100px;
-}
+form div{
+    padding: 5px;
+    background-color: #000a23;
+    width: 300px;
 
+}
+form label{
+    text-transform: uppercase;
+    color: whitesmoke;
+}
+.nsection1{
+    display: flex;
+    padding: 50px;
+    width: 100vw;
+    min-height: 300px;
+}
     /*----------------------- FOOTER -----------------------*/
 
 .footer{
