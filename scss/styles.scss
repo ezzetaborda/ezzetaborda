@@ -5,35 +5,35 @@
     box-sizing: border-box;
 }
 /* FONTS */
-
-    /* RUBIK:
-    font-family: 'Oswald', sans-serif;
-    font-family: 'Rubik', sans-serif; 
-    font-family: 'Roboto', sans-serif; */
-    $font1: 'Roboto', sans-serif;
-    $font2: 'Rubik', sans-serif;
-    $font3: 'Oswald', sans-serif;
+    $roboto: 'Roboto', sans-serif; /* Parrafos */
+    $rubik: 'Rubik', sans-serif; /* Titulos y navLinks  */
+    $oswald: 'Oswald', sans-serif;
+    $impact: Impact,'Arial Narrow Bold', sans-serif; /* listas de cuentas  */
+/* COLORS */
+    $color1: #001f3b; /* fondo general */
+    $color2: #031625; /* Fondo de sections azules */
+    $color3: #ff3c00; /* Fondo de sections/1erTitulo naranjas */
 
 
 /*----------------------- TEXTOS-----------------------*/  
     
 h1{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: $color3;
     font-size: 30px;
-    font-family: 'Rubik', sans-serif;
+    font-family: $rubik;
     color: white;
     letter-spacing: 5px;
     text-transform: uppercase;
     -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: black;
-    background-image: linear-gradient( #ff3c00 , #b63400);
-    width: 100%;
-    align-self: center;
-    display: flex;
-    justify-content: center;
+
 }
 h2{
     font-size: 25px;
-    font-family: 'Rubik', sans-serif;
+    font-family: $rubik;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     -webkit-text-stroke-width: 1.5px;
@@ -41,23 +41,25 @@ h2{
 }
 p{
     font-size: 22px;
-    font-family: 'Roboto', sans-serif;
+    font-family: $roboto;
     margin: 10px;
 }
-
-/*----------------------- GRID AREA-----------------------*/  
-body{
-    background-color: #030011;
-    width: 100vw;
+h5{
+    font-family: $impact;
+    color: rgb(22, 21, 21);
 }
+
+/*----------------------- GRID AREA-----------------------*/    
+
 .bodydiv {
     display: grid;
-    background-color: #030011;
+    background-color: $color1;
     grid-template-columns: 1fr;
-    gap: 20px 0px;
-    grid-template-rows: 0.1fr 0.4fr auto 1fr auto auto 1fr 0.2fr;
+    gap: 5px 0px;
+    grid-template-rows: auto 0.6fr 0.4fr auto 0.2fr auto auto 1fr 0.2fr;
     grid-template-areas: 
       "header"
+      "hero"
       "section0"
       "section1"
       "section2"
@@ -67,7 +69,16 @@ body{
       "footer";
     }
 
-
+body{
+    background-color: $color1;
+    width: 100vw;
+}
+main{
+    background-color: $color1;
+}
+.bodydiv{
+    width: 100vw;
+}
     
 
     /*----------------------- header -----------------------*/
@@ -75,73 +86,77 @@ body{
 
 .header{
     grid-area: header;
-    background-color: #000a23;
     display: flex;
-    width: 100vw;
+    background-color: #000a23;
     flex-direction: column;
     align-items: center;
 }
-header div{
-    display: flex;
+header img{
     background-image: url(../multimedia/images/logo\ influteniente.png);
     background-size: cover;
-    height: 200px;
-    width: 200px;
+    max-height: 200px;
+    max-width: 200px;
 }
         /*----------------------- NAVBAR-----------------------*/
-
-.navbar{
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    max-height: 50px;
-}
 .navbar-brand{
     margin: 20px;
-} 
-.navbar div{
-    display: flex;
-    justify-content: center;
+}
+.navbar ul{
+    list-style: none;
 }
 .navbar ul li a{
     text-transform: uppercase;
-    font-family: 'Rubik', sans-serif;
-    color: #ffd5c8;
-    list-style: none;
-}
-.navbar a{
+    font-family: $rubik;
     color: #ffffff;
-    font-family: 'Rubik', sans-serif;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: rgb(48, 47, 46);
+    margin: 20px;
 }
-
-
+.navbar ul li a:hover{
+    transition: all 0.5s;
+    color: #ffffff;
+    transform: scale(1.15);
+}
+        /*------------------------ HERO -------------------------*/
+.hero{
+    grid-area: hero;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color2;
+}
+.hero img{
+    max-width: 100%;
+}
         /*----------------------- SECTION0-----------------------*/
 
 .section0{
-    background-image: linear-gradient(#04233d , #021d34 );
-    width: 100vw;
     grid-area: section0;
     display: flex;
+    background-color: $color2;
+    width: 100vw;
     align-items: center;
     flex-direction: column;
 }
 .section0 div{
-    margin-top: 20px;
+    margin: 20px;
     display: flex;
     align-items: center;
 }
 
 .card{
-    height: 20rem;
-    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    height: 23rem;
+    width: 15rem;
     margin: 10px;
-    padding: 5px;
 }
-.section0 div div:hover{
-    transition: all 1s;
-    transform: scale(1.15);
+.card div{
+    display: flex;
+    flex-direction: column;
+}
+.card img{
+    max-width: 200px;
 }
         /*----------------------- SECTION1-----------------------*/
 
@@ -149,7 +164,7 @@ header div{
 .section1{
     grid-area: section1;
     width: 100vw;
-    background-image: linear-gradient( #ff3c00 , #b63400);
+    background-color: $color3;
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -162,28 +177,30 @@ header div{
 .section2{
     grid-area: section2;
     width: 100vw;
-    background-image: linear-gradient(#052a49 , #021d34 );
+    background-color: $color2;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 .section2 div{
-    margin: 2px;
+    margin: 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 
 }
-.section2 div div{
-    height: 400px;
-    width: 300px;
+.card2{
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    width: 15rem;
     margin: 10px;
-    background-color: cadetblue;
+    background-color: #ffffff;
 }
-.section2 div div:hover{
-    transition: all 1s;
-    transform: scale(1.15);
+.card2 img{
+    max-width: 200px;
 }
+
 .section2 h2{
     display: flex;
     align-items: center;
@@ -198,7 +215,7 @@ header div{
     width: 100vw;
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient( #ff3c00 , #ce4a16);
+    background-color: $color3;
     padding: 20px;
 
 }
@@ -209,7 +226,7 @@ header div{
 .section4{
     grid-area: section4;
     width: 100vw;
-    background-image: linear-gradient( #ff3c00 , #bd4516);
+    background-color: $color3;
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -221,7 +238,7 @@ header div{
     grid-area: section5;
     display: flex;
     width: 100vw;
-    background-image: linear-gradient(#042441 , #021d34 );
+    background-color: $color2;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -234,11 +251,10 @@ header div{
     height: 400px;
     width: 300px;
     margin: 30px;
-    background-color: cadetblue;
 }
 .section5 div div:hover{
     transition: all 1s;
-    transform: scale(1.15);
+    transform: scale(1.11);
 }
 .section5 h2{
     align-self: center;
@@ -254,23 +270,25 @@ header div{
 .igtwsections {  
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 0.3fr auto auto;
-    gap: 5px 2px;
+    grid-template-rows: 0.2fr 0.4fr 0.3fr auto auto 0.3fr;
+    gap: 2px 2px;
     grid-auto-flow: row;
     grid-template-areas:
-      "section1pages section1pages"
-      "igtwsection2 igtwsection3"
-      "igtwsection4 igtwsection4"
-      "igtwsection5 igtwsection5";
+        "header header"
+        "section1pages section1pages"
+        "igtwsection2 igtwsection3"
+        "igtwsection4 igtwsection4"
+        "igtwsection5 igtwsection5"
+        "footer footer";
   }
   
 
 .igtwsection1{
     grid-area: section1pages;
-    width: 100vw;
-    background-color: #021d34;
     display: flex;
-    align-items: center;
+    width: 100vw;
+    background-color: $color2;
+    justify-content: center;
     flex-direction: column;
 }
 .igtwsection1 div{
@@ -280,16 +298,20 @@ header div{
     align-items: center;
 
 }
-.igtwsection1 div div{
-
-    height: 200px;
-    width: 200px;
-    margin: 20px;
-    background-color: cadetblue;
+.cardIgTw{
+    display: flex;
+    flex-direction: column;
+    height: 23rem;
+    width: 15rem;
+    margin: 10px;
 }
-.igtwsection1 div div:hover{
-    transition: all 1s;
-    transform: scale(1.15);
+.cardIgTw div{
+    display: flex;
+    flex-direction: column;
+    max-height: 20px;
+}
+.cardIgTw img{
+    max-width: 200px;
 }
 /* --------------- SECTION 2 ------------------------------------------------------ */
 
@@ -300,15 +322,15 @@ header div{
     align-items: center;
     padding: 10px;
     justify-content: center;
-    background-color: #021d34;
+    background-color: $color2;
 
 }
 
 .igtwsection2 ul li{
     list-style: none;
-    font-family: 'Oswald', sans-serif;
+    font-family: $oswald;
     text-transform: uppercase;
-    color: #ff3c00;
+    color: white;
 }
 
 /* --------------- SECTION 3 ------------------------------------------------------ */
@@ -316,17 +338,17 @@ header div{
 .igtwsection3 { 
     grid-area: igtwsection3;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     padding: 10px;
-    background-color: #021d34;
+    justify-content: center;
+    background-color: $color2;
 }
 .igtwsection3 ul li{
     list-style: none;
-    font-family: 'Oswald', sans-serif;
+    font-family: $oswald;
     text-transform: uppercase;
-    color: #ff3c00;
+    color: white;
 }
 
 /* --------------- SECTION 4 ------------------------------------------------------ */
@@ -337,7 +359,7 @@ header div{
     width: 100vw;
     align-items: center;
     flex-direction: column;
-    background-color: #ff3c00;
+    background-color: $color3;
 
 }
 
@@ -349,56 +371,81 @@ header div{
     width: 100vw;
     flex-direction: column;
     align-items: center;
-    background-color: #ff3c00;
+    background-color: $color3;
 }
 
 
-/*-------------- CONTACTO.HTML ------------------*/
+/*---------------------------------- CONTACTO.HTML ----------------------------------*/
+
+
+/*-------------- FORM ------------------*/
 .contenedorForm{
-    width: 100vw;
-    min-height: 200px;
     display: flex;
-    justify-content: center;
-    background-color: #000a23;
+    width: 100vw;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: $color2;
 }
 form{
     display: flex;
     flex-direction: column;
 }
 form div{
-    padding: 5px;
-    background-color: #000a23;
-    width: 300px;
-
+    display: flex;
 }
-form label{
+form div label{
     text-transform: uppercase;
+    width: 500px;
     color: whitesmoke;
 }
+form div input{
+    display: flex;
+    justify-content: left;
+}
+form button{
+    max-height: 100px;
+}
+/*-------------- SECTION1 contacto ------------------*/
 .nsection1{
-    background-color: #05163f;
+    background-color: $color2;
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 100vw;
-    height: 350px;
+    min-height: 500px;
 }
 .carousel{
     padding: 50px;
-    width: 500px;
+    width: 600px;
     height: 300px;
 }
+    /*----------------------- RECOMENDADO.HTML -----------------------*/
+
+.recomendadomain{
+    background-color: $color2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.recomendadomain section{
+    display: flex;
+    flex-direction: row;
+}
+.recomendadomain section div{
+    margin: 10px;
+}
+
+
+
     /*----------------------- FOOTER -----------------------*/
 
 .footer{
     grid-area: footer;
-    width: 100vw;
     background-color: #000a23;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    
+    padding: 30px;
+    width: 100vw;
 }
 .footer ul{
     list-style: none;
@@ -406,7 +453,7 @@ form label{
 .footer ul li a{
     color: floralwhite;
     text-decoration: wavy;
-    font-family: 'Oswald', sans-serif;
+    font-family: $oswald;
     text-transform: uppercase;
 
 }
@@ -421,60 +468,50 @@ form label{
 }
 .footer div a{
     margin: 5px;
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     
 }
 .igicon{
-    background-image: url(../multimedia/images/instagram.png);
+    background-image: url(../multimedia/images/logoig.png);
     background-size: cover;
 
 }
 .twicon{
-    background-image: url(../multimedia/images/twitter.png);
+    background-image: url(../multimedia/images/logotw.png);
     background-size: cover;
 }
 .wpicon{
-    background-image: url(../multimedia/images/whatsapp.png);
+    background-image: url(../multimedia/images/logowp.png);
     background-size: cover;
 }
 
-    /*----------------------- MEDIA QUERIES -----------------------*/
+    /*---------------------------------- MEDIA QUERIES -----------------------------------*/
   
-    
-    @media (max-width: 650px) {
-        .igtwsections {  
-            display: grid;
-            grid-template-areas:
-              "section1pages"
-              "igtwsection2"
-              "igtwsection3"
-              "igtwsection4"
-              "igtwsection5";
-        }
-
-        .section0 div{
-           flex-direction: column;
-        }
-    }    
+@media (max-width: 1180px) {
+    .recomendadomain section{
+        flex-direction: column;
+    }
+}    
+ 
+@media (max-width: 1080px) {
+    .section5 div{
+        flex-direction: column;
+    }
+}
 
 @media (max-width: 1020px) {
 
-
+    .igtwsection1 div{
+        flex-direction: column;
+    }
 
     .section1{
         align-items: center;
         padding: 10px ;
         justify-content: center;
     }
-    .section2{
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .section2 div{
-        flex-direction: column;
-    }
     .section3{
         align-items: center;
         padding: 10px ;
@@ -485,22 +522,46 @@ form label{
         padding: 10px ;
         justify-content: center;
     }
-    .section5 div{
-        flex-direction: column;
-    }
-
 
 }
 
 @media (max-width: 920px){
-    .igtwsection1 div{
-    flex-direction: column;
+
+    .section0 div{
+        flex-direction: column;
+     }
+     
+     .section2{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section2 div{
+        flex-direction: column;
     }
 }
 
+@media (max-width: 650px) {
+    .igtwsections {  
+        display: grid;
+        grid-template-areas:
+        "header"
+        "section1pages"
+        "igtwsection2"
+        "igtwsection3"
+        "igtwsection4"
+        "igtwsection5"
+        "footer";
+    }
 
-@media (max-width: 500px){
-    .header nav ul{
+    .recomendadomain section div iframe{
+        max-width: 300px;
+    }
+
+}   
+
+@media (max-width: 720px){
+    .header div nav{
 
         flex-direction: column;
     }
@@ -513,5 +574,5 @@ form label{
     .footer div{
         flex-direction: column;
         margin-left: 20px;
-}
+    }
 }
