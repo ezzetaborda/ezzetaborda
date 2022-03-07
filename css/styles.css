@@ -13,6 +13,7 @@
 /* fondo general */
 /* Fondo de sections azules */
 /* Fondo de sections/1erTitulo naranjas */
+/* fondo header y footer */
 /*----------------------- TEXTOS-----------------------*/
 h1 {
   display: flex;
@@ -38,9 +39,18 @@ h2 {
 }
 
 p {
-  font-size: 22px;
+  font-size: 25px;
   font-family: "Roboto", sans-serif;
-  margin: 10px;
+  margin: 50px;
+  color: black;
+}
+
+p span {
+  font-size: 25px;
+  color: white;
+  font-family: "Rubik", sans-serif;
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: black;
 }
 
 h5 {
@@ -75,7 +85,7 @@ main {
 .header {
   grid-area: header;
   display: flex;
-  background-color: #000a23;
+  background-color: #02101b;
   flex-direction: column;
   align-items: center;
 }
@@ -117,7 +127,7 @@ header img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #031625;
+  background-color: #041d30;
 }
 
 .hero img {
@@ -128,7 +138,7 @@ header img {
 .section0 {
   grid-area: section0;
   display: flex;
-  background-color: #031625;
+  background-color: #041d30;
   width: 100vw;
   align-items: center;
   flex-direction: column;
@@ -164,14 +174,14 @@ header img {
   background-color: #ff3c00;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 5%;
 }
 
 /*----------------------- SECTION2-----------------------*/
 .section2 {
   grid-area: section2;
   width: 100vw;
-  background-color: #031625;
+  background-color: #041d30;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -210,7 +220,7 @@ header img {
   display: flex;
   flex-direction: column;
   background-color: #ff3c00;
-  padding: 20px;
+  padding: 5%;
 }
 
 /*----------------------- SECTION4-----------------------*/
@@ -220,7 +230,7 @@ header img {
   background-color: #ff3c00;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 5%;
 }
 
 /*----------------------- SECTION5-----------------------*/
@@ -228,7 +238,7 @@ header img {
   grid-area: section5;
   display: flex;
   width: 100vw;
-  background-color: #031625;
+  background-color: #041d30;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -260,17 +270,17 @@ header img {
 .igtwsections {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.2fr 0.4fr 0.3fr auto auto 0.3fr;
-  gap: 2px 2px;
+  grid-template-rows: 0.4fr 0.3fr auto auto;
+  gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "header header" "section1pages section1pages" "igtwsection2 igtwsection3" "igtwsection4 igtwsection4" "igtwsection5 igtwsection5" "footer footer";
+  grid-template-areas: "section1pages section1pages" "igtwsection2 igtwsection3" "igtwsection4 igtwsection4" "igtwsection5 igtwsection5";
 }
 
 .igtwsection1 {
   grid-area: section1pages;
   display: flex;
   width: 100vw;
-  background-color: #031625;
+  background-color: #041d30;
   justify-content: center;
   flex-direction: column;
 }
@@ -308,14 +318,11 @@ header img {
   align-items: center;
   padding: 10px;
   justify-content: center;
-  background-color: #031625;
+  background-color: #041d30;
 }
 
-.igtwsection2 ul li {
-  list-style: none;
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  color: white;
+.igtwsection2 div {
+  width: 90%;
 }
 
 /* --------------- SECTION 3 ------------------------------------------------------ */
@@ -326,34 +333,84 @@ header img {
   align-items: center;
   padding: 10px;
   justify-content: center;
-  background-color: #031625;
+  background-color: #041d30;
 }
 
-.igtwsection3 ul li {
-  list-style: none;
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  color: white;
+.igtwsection3 div {
+  width: 90%;
 }
 
 /* --------------- SECTION 4 ------------------------------------------------------ */
+.igtwsection4 ::-webkit-scrollbar {
+  display: none;
+}
+
 .igtwsection4 {
   grid-area: igtwsection4;
   display: flex;
   width: 100vw;
+}
+
+.igtwsection4titulo {
+  display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  padding: 5%;
+  background-image: url(../multimedia/images/fondosection1.png);
+  background-size: cover;
+}
+
+.igtwsection4parrafo {
+  padding: 2%;
+  width: 50%;
   background-color: #ff3c00;
 }
 
+.igtwsection4parrafo nav {
+  display: flex;
+  justify-content: center;
+}
+
+.igtwsection4parrafo div {
+  position: relative;
+  overflow-y: scroll;
+  max-height: 400px;
+}
+
 /* --------------- SECTION 5 ------------------------------------------------------ */
+.igtwsection5 ::-webkit-scrollbar {
+  display: none;
+}
+
 .igtwsection5 {
   grid-area: igtwsection5;
   display: flex;
+  flex-direction: row-reverse;
   width: 100vw;
-  flex-direction: column;
-  align-items: center;
   background-color: #ff3c00;
+}
+
+.igtwsection5titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  padding: 5%;
+  background-image: url(../multimedia/images/fondosection2.png);
+  background-size: cover;
+}
+
+.igtwsection5parrafo {
+  width: 50%;
+  background-color: #ff3c00;
+  padding: 2%;
+}
+
+.igtwsection5parrafo div {
+  position: relative;
+  overflow-y: scroll;
+  max-height: 400px;
 }
 
 /*---------------------------------- CONTACTO.HTML ----------------------------------*/
@@ -363,7 +420,7 @@ header img {
   width: 100vw;
   padding: 10px;
   margin-top: 10px;
-  background-color: #031625;
+  background-color: #041d30;
 }
 
 form {
@@ -392,7 +449,7 @@ form button {
 
 /*-------------- SECTION1 contacto ------------------*/
 .nsection1 {
-  background-color: #031625;
+  background-color: #041d30;
   display: flex;
   justify-content: center;
   width: 100vw;
@@ -407,7 +464,7 @@ form button {
 
 /*----------------------- RECOMENDADO.HTML -----------------------*/
 .recomendadomain {
-  background-color: #031625;
+  background-color: #041d30;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -425,7 +482,7 @@ form button {
 /*----------------------- FOOTER -----------------------*/
 .footer {
   grid-area: footer;
-  background-color: #000a23;
+  background-color: #02101b;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -525,7 +582,7 @@ form button {
 @media (max-width: 650px) {
   .igtwsections {
     display: grid;
-    grid-template-areas: "header" "section1pages" "igtwsection2" "igtwsection3" "igtwsection4" "igtwsection5" "footer";
+    grid-template-areas: "section1pages" "igtwsection2" "igtwsection3" "igtwsection4" "igtwsection5";
   }
 
   .recomendadomain section div iframe {

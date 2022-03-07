@@ -11,8 +11,9 @@
     $impact: Impact,'Arial Narrow Bold', sans-serif; /* listas de cuentas  */
 /* COLORS */
     $color1: #001f3b; /* fondo general */
-    $color2: #031625; /* Fondo de sections azules */
+    $color2: #041d30; /* Fondo de sections azules */
     $color3: #ff3c00; /* Fondo de sections/1erTitulo naranjas */
+    $color4: #02101b; /* fondo header y footer */
 
 
 /*----------------------- TEXTOS-----------------------*/  
@@ -40,9 +41,18 @@ h2{
     -webkit-text-stroke-color: rgb(0, 0, 0);
 }
 p{
-    font-size: 22px;
+    font-size: 25px;
     font-family: $roboto;
-    margin: 10px;
+    margin: 50px;
+    color: black;
+}
+p span{
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    font-family: $rubik;
+    -webkit-text-stroke-width: 1.2px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+
 }
 h5{
     font-family: $impact;
@@ -87,7 +97,7 @@ main{
 .header{
     grid-area: header;
     display: flex;
-    background-color: #000a23;
+    background-color: $color4;
     flex-direction: column;
     align-items: center;
 }
@@ -167,7 +177,7 @@ header img{
     background-color: $color3;
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 5%;
 }
 
 
@@ -216,7 +226,7 @@ header img{
     display: flex;
     flex-direction: column;
     background-color: $color3;
-    padding: 20px;
+    padding: 5%;
 
 }
 
@@ -229,7 +239,7 @@ header img{
     background-color: $color3;
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 5%;
 }
 
         /*----------------------- SECTION5-----------------------*/
@@ -270,16 +280,14 @@ header img{
 .igtwsections {  
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.2fr 0.4fr 0.3fr auto auto 0.3fr;
-    gap: 2px 2px;
+    grid-template-rows: 0.4fr 0.3fr auto auto ;
+    gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-        "header header"
         "section1pages section1pages"
         "igtwsection2 igtwsection3"
         "igtwsection4 igtwsection4"
-        "igtwsection5 igtwsection5"
-        "footer footer";
+        "igtwsection5 igtwsection5";
   }
   
 
@@ -324,13 +332,11 @@ header img{
     justify-content: center;
     background-color: $color2;
 
-}
+}   
 
-.igtwsection2 ul li{
-    list-style: none;
-    font-family: $oswald;
-    text-transform: uppercase;
-    color: white;
+
+.igtwsection2 div{
+    width: 90%;
 }
 
 /* --------------- SECTION 3 ------------------------------------------------------ */
@@ -344,35 +350,75 @@ header img{
     justify-content: center;
     background-color: $color2;
 }
-.igtwsection3 ul li{
-    list-style: none;
-    font-family: $oswald;
-    text-transform: uppercase;
-    color: white;
+.igtwsection3 div{
+    width: 90%;
 }
 
 /* --------------- SECTION 4 ------------------------------------------------------ */
-
+.igtwsection4 ::-webkit-scrollbar{
+    display: none;
+}
 .igtwsection4 { 
     grid-area: igtwsection4;
     display: flex;
     width: 100vw;
+}
+.igtwsection4titulo{
+    display: flex;
     align-items: center;
-    flex-direction: column;
-    background-color: $color3;
+    justify-content: center;
+    width: 50%;
+    padding: 5%;
+    background-image: url(../multimedia/images/fondosection1.png);
+    background-size: cover;
 
 }
-
+.igtwsection4parrafo{
+    padding: 2%;
+    width: 50%;
+    background-color: $color3;
+}
+.igtwsection4parrafo nav{
+    display: flex;
+    justify-content: center;
+}
+.igtwsection4parrafo div{
+    position: relative;
+    overflow-y: scroll;
+    max-height: 400px;
+}
 /* --------------- SECTION 5 ------------------------------------------------------ */
-
-.igtwsection5 { 
+.igtwsection5 ::-webkit-scrollbar{
+    display: none;
+}
+.igtwsection5 {
     grid-area: igtwsection5;
     display: flex;
+    flex-direction: row-reverse;
     width: 100vw;
-    flex-direction: column;
-    align-items: center;
     background-color: $color3;
 }
+.igtwsection5titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 5%;
+    background-image: url(../multimedia/images/fondosection2.png);
+    background-size: cover;
+}
+.igtwsection5parrafo{
+    width: 50%;
+    background-color: $color3;
+    padding: 2%;
+}
+.igtwsection5parrafo div{
+    position: relative;
+    overflow-y: scroll;
+    max-height: 400px;
+    
+}
+
 
 
 /*---------------------------------- CONTACTO.HTML ----------------------------------*/
@@ -440,7 +486,7 @@ form button{
 
 .footer{
     grid-area: footer;
-    background-color: #000a23;
+    background-color: $color4;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -545,13 +591,12 @@ form button{
     .igtwsections {  
         display: grid;
         grid-template-areas:
-        "header"
         "section1pages"
         "igtwsection2"
         "igtwsection3"
         "igtwsection4"
         "igtwsection5"
-        "footer";
+        ;
     }
 
     .recomendadomain section div iframe{
