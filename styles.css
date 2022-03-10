@@ -1,3 +1,4 @@
+/* INDEX.HTML */
 * {
   margin: 0%;
   padding: 0%;
@@ -14,6 +15,74 @@
 /* Fondo de sections azules */
 /* Fondo de sections/1erTitulo naranjas */
 /* fondo header y footer */
+/*----------------------- TEXTOS-----------------------*/
+h1 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #ff3c00;
+  font-size: 30px;
+  font-family: "Rubik", sans-serif;
+  color: white;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+}
+
+h2 {
+  font-size: 25px;
+  font-family: "Rubik", sans-serif;
+  color: white;
+  text-transform: uppercase;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+}
+
+p {
+  font-size: 25px;
+  font-family: "Roboto", sans-serif;
+  margin: 50px;
+  color: black;
+}
+
+p span {
+  font-size: 25px;
+  color: white;
+  font-family: "Rubik", sans-serif;
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: black;
+}
+
+h5 {
+  font-family: Impact, "Arial Narrow Bold", sans-serif;
+  color: #161515;
+}
+
+/*----------------------- GRID AREA-----------------------*/
+.bodydiv {
+  display: grid;
+  background-color: #001f3b;
+  grid-template-columns: 1fr;
+  gap: 5px 0px;
+  grid-template-rows: auto 0.6fr 0.4fr auto 0.2fr auto auto 1fr 0.2fr;
+  grid-template-areas: "header" "hero" "section0" "section1" "section2" "section3" "section4" "section5" "footer";
+}
+
+body {
+  background-color: #001f3b;
+  width: 100vw;
+}
+
+main {
+  background-color: #001f3b;
+}
+
+.bodydiv {
+  width: 100vw;
+}
+
+/*----------------------- header -----------------------*/
 .header {
   grid-area: header;
   display: flex;
@@ -21,16 +90,21 @@
   flex-direction: column;
   align-items: center;
 }
-.header img {
+
+header img {
   background-image: url(../multimedia/images/logo\ influteniente.png);
   background-size: cover;
   max-height: 200px;
   max-width: 200px;
 }
-.header .navbar ul {
+
+/*----------------------- NAVBAR-----------------------*/
+
+.navbar ul {
   list-style: none;
 }
-.header .navbar ul li a {
+
+.navbar ul li a {
   text-transform: uppercase;
   font-family: "Rubik", sans-serif;
   font-size: 20px;
@@ -39,22 +113,15 @@
   -webkit-text-stroke-color: #302f2e;
   margin: 10px;
 }
-.header .navbar ul li a:hover {
+
+.navbar ul li a:hover {
   transition: all 0.5s;
   color: #ffffff;
   transform: scale(1.15);
 }
 
-.bodydiv {
-  display: grid;
-  width: 100vw;
-  background-color: #001f3b;
-  grid-template-columns: 1fr;
-  gap: 5px 0px;
-  grid-template-rows: auto 0.6fr 0.4fr auto 0.2fr auto auto 1fr 0.2fr;
-  grid-template-areas: "header" "hero" "section0" "section1" "section2" "section3" "section4" "section5" "footer";
-}
-.bodydiv .hero {
+/*------------------------ HERO -------------------------*/
+.hero {
   grid-area: hero;
   display: flex;
   align-items: center;
@@ -66,14 +133,16 @@
   min-height: 500px;
   background-image: url(../multimedia/images/hero.png);
 }
-.bodydiv .hero div {
+
+.hero div {
   display: flex;
   padding: 10px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.bodydiv .hero div .textohero {
+
+.textohero {
   font-size: 40px;
   font-family: "Alfa Slab One", cursive;
   text-transform: uppercase;
@@ -83,7 +152,9 @@
   margin: 5px;
   -webkit-text-stroke-color: white;
 }
-.bodydiv .section0 {
+
+/*----------------------- SECTION0-----------------------*/
+.section0 {
   grid-area: section0;
   display: flex;
   background-color: #041d30;
@@ -91,43 +162,32 @@
   align-items: center;
   flex-direction: column;
 }
-.bodydiv .section0 h1 {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  background-color: #ff3c00;
-  font-size: 30px;
-  font-family: "Rubik", sans-serif;
-  color: white;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: black;
-}
-.bodydiv .section0 div {
+
+.section0 div {
   margin: 20px;
   display: flex;
   align-items: center;
 }
-.bodydiv .section0 div .card {
+
+.card {
   display: flex;
   flex-direction: column;
   height: 23rem;
   width: 15rem;
   margin: 10px;
 }
-.bodydiv .section0 div .card div {
+
+.card div {
   display: flex;
   flex-direction: column;
 }
-.bodydiv .section0 div .card div h5 {
-  font-family: Impact, "Arial Narrow Bold", sans-serif;
-  color: #161515;
-}
-.bodydiv .section0 div .card img {
+
+.card img {
   max-width: 200px;
 }
-.bodydiv .section1 {
+
+/*----------------------- SECTION1-----------------------*/
+.section1 {
   grid-area: section1;
   width: 100vw;
   background-color: #ff3c00;
@@ -135,21 +195,9 @@
   flex-direction: column;
   padding: 5%;
 }
-.bodydiv .section1 h2 {
-  font-size: 25px;
-  font-family: "Rubik", sans-serif;
-  color: white;
-  text-transform: uppercase;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: black;
-}
-.bodydiv .section1 div p {
-  font-size: 25px;
-  font-family: "Roboto", sans-serif;
-  margin: 50px;
-  color: black;
-}
-.bodydiv .section2 {
+
+/*----------------------- SECTION2-----------------------*/
+.section2 {
   grid-area: section2;
   width: 100vw;
   background-color: #041d30;
@@ -157,24 +205,15 @@
   align-items: center;
   flex-direction: column;
 }
-.bodydiv .section2 h2 {
-  display: flex;
-  align-items: center;
-  margin: 10px;
-  font-size: 25px;
-  font-family: "Rubik", sans-serif;
-  color: white;
-  text-transform: uppercase;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: black;
-}
-.bodydiv .section2 div {
+
+.section2 div {
   margin: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.bodydiv .section2 div .card2 {
+
+.card2 {
   display: flex;
   flex-direction: column;
   height: 22rem;
@@ -182,14 +221,24 @@
   margin: 10px;
   background-color: white;
 }
-.bodydiv .section2 div .card2 div {
+
+.card2 div {
   display: flex;
   flex-direction: column;
 }
-.bodydiv .section2 div .card2 img {
+
+.card2 img {
   max-width: 200px;
 }
-.bodydiv .section3 {
+
+.section2 h2 {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+/*----------------------- SECTION3-----------------------*/
+.section3 {
   grid-area: section3;
   width: 100vw;
   display: flex;
@@ -197,28 +246,9 @@
   background-color: #ff3c00;
   padding: 5%;
 }
-.bodydiv .section3 h2 {
-  font-size: 25px;
-  font-family: "Rubik", sans-serif;
-  color: white;
-  text-transform: uppercase;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: black;
-}
-.bodydiv .section3 p {
-  font-size: 25px;
-  font-family: "Roboto", sans-serif;
-  margin: 50px;
-  color: black;
-}
-.bodydiv .section3 p span {
-  font-size: 25px;
-  color: white;
-  font-family: "Rubik", sans-serif;
-  -webkit-text-stroke-width: 1.2px;
-  -webkit-text-stroke-color: black;
-}
-.bodydiv .section4 {
+
+/*----------------------- SECTION4-----------------------*/
+.section4 {
   grid-area: section4;
   width: 100vw;
   background-color: #ff3c00;
@@ -226,21 +256,9 @@
   flex-direction: column;
   padding: 5%;
 }
-.bodydiv .section4 h2 {
-  font-size: 25px;
-  font-family: "Rubik", sans-serif;
-  color: white;
-  text-transform: uppercase;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: black;
-}
-.bodydiv .section4 p {
-  font-size: 25px;
-  font-family: "Roboto", sans-serif;
-  margin: 50px;
-  color: black;
-}
-.bodydiv .section5 {
+
+/*----------------------- SECTION5-----------------------*/
+.section5 {
   grid-area: section5;
   display: flex;
   width: 100vw;
@@ -249,29 +267,30 @@
   justify-content: center;
   flex-direction: column;
 }
-.bodydiv .section5 h2 {
-  align-self: center;
-  font-size: 25px;
-  font-family: "Rubik", sans-serif;
-  color: white;
-  text-transform: uppercase;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: black;
-}
-.bodydiv .section5 div {
+
+.section5 div {
   display: flex;
   flex-direction: row;
 }
-.bodydiv .section5 div img {
+
+.section5 div div {
   height: 400px;
   width: 300px;
   margin: 30px;
 }
-.bodydiv .section5 div img:hover {
+
+.section5 div div:hover {
   transition: all 1s;
   transform: scale(1.11);
 }
 
+.section5 h2 {
+  align-self: center;
+}
+
+/* --------------- ../PAGES --------------- */
+/* --------------- GRIDS2.0 --------------- */
+/* --------------- SECTION 1 TW E IG ----------------------------------------------------- */
 .igtwsections {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -281,7 +300,8 @@
   grid-auto-flow: row;
   grid-template-areas: "section1pages section1pages" "igtwsection2 igtwsection3" "igtwsection4 igtwsection4" "igtwsection5 igtwsection5";
 }
-.igtwsections .igtwsection1 {
+
+.igtwsection1 {
   grid-area: section1pages;
   display: flex;
   width: 100vw;
@@ -289,41 +309,34 @@
   justify-content: center;
   flex-direction: column;
 }
-.igtwsections .igtwsection1 h1 {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  background-color: #ff3c00;
-  font-size: 30px;
-  font-family: "Rubik", sans-serif;
-  color: white;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: black;
-}
-.igtwsections .igtwsection1 div {
+
+.igtwsection1 div {
   margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.igtwsections .igtwsection1 div .cardIgTw {
+
+.cardIgTw {
   display: flex;
   flex-direction: column;
   height: 23rem;
   width: 15rem;
   margin: 10px;
 }
-.igtwsections .igtwsection1 div .cardIgTw div {
+
+.cardIgTw div {
   display: flex;
   flex-direction: column;
   max-height: 20px;
 }
-.igtwsections .igtwsection1 div .cardIgTw div img {
+
+.cardIgTw img {
   max-width: 200px;
 }
-.igtwsections .igtwsection2 {
+
+/* --------------- SECTION 2 ------------------------------------------------------ */
+.igtwsection2 {
   grid-area: igtwsection2;
   display: flex;
   flex-direction: column;
@@ -331,18 +344,17 @@
   padding: 10px;
   background-color: #041d30;
 }
-.igtwsections .igtwsection2 h2 {
-  font-size: 25px;
-  font-family: "Rubik", sans-serif;
-  color: white;
-  text-transform: uppercase;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: black;
-}
-.igtwsections .igtwsection2 div {
+
+.igtwsection2 div {
   width: 90%;
 }
-.igtwsections .igtwsection3 {
+
+.twsection2parrafo {
+  color: wheat;
+}
+
+/* --------------- SECTION 3 ------------------------------------------------------ */
+.igtwsection3 {
   grid-area: igtwsection3;
   display: flex;
   flex-direction: column;
@@ -350,23 +362,29 @@
   padding: 10px;
   background-color: #041d30;
 }
-.igtwsections .igtwsection3 .igtwsection3titulo h2 {
-  font-size: 25px;
-  font-family: "Rubik", sans-serif;
-  color: white;
-  text-transform: uppercase;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: black;
-}
-.igtwsections .igtwsection3 div {
+
+.igtwsection3 div {
   width: 90%;
 }
-.igtwsections .igtwsection4 {
+
+.twtitulosection3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.igtwsection3 div p {
+  color: wheat;
+}
+
+/* --------------- SECTION 4 ------------------------------------------------------ */
+.igtwsection4 {
   grid-area: igtwsection4;
   display: flex;
   width: 100vw;
 }
-.igtwsections .igtwsection4 .igtwsection4titulo {
+
+.igtwsection4titulo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -375,15 +393,8 @@
   background-image: url(../multimedia/images/fondosection1.png);
   background-size: cover;
 }
-.igtwsections .igtwsection4 .igtwsection4titulo h2 {
-  font-size: 25px;
-  font-family: "Rubik", sans-serif;
-  color: white;
-  text-transform: uppercase;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: black;
-}
-.igtwsections .igtwsection4 .igtwsection4parrafo {
+
+.igtwsection4parrafo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -391,17 +402,26 @@
   width: 50%;
   background-color: #ff3c00;
 }
-.igtwsections .igtwsection4 .igtwsection4parrafo nav {
+
+.igtwsection4parrafo nav {
   display: flex;
   justify-content: center;
 }
-.igtwsections .igtwsection4 .igtwsection5 {
+
+.twsection4parrafo {
+  font-size: 25px;
+}
+
+/* --------------- SECTION 5 ------------------------------------------------------ */
+.igtwsection5 {
   grid-area: igtwsection5;
   display: flex;
+  flex-direction: row-reverse;
   width: 100vw;
   background-color: #ff3c00;
 }
-.igtwsections .igtwsection4 .igtwsection5 .igtwsection5titulo {
+
+.igtwsection5titulo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -410,15 +430,8 @@
   background-image: url(../multimedia/images/fondosection2.png);
   background-size: cover;
 }
-.igtwsections .igtwsection4 .igtwsection5 .igtwsection5titulo h2 {
-  font-size: 25px;
-  font-family: "Rubik", sans-serif;
-  color: white;
-  text-transform: uppercase;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: black;
-}
-.igtwsections .igtwsection4 .igtwsection5 .igtwsection5parrafo {
+
+.igtwsection5parrafo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -427,62 +440,124 @@
   padding: 2%;
 }
 
-.nmain {
-  background-color: #001f3b;
-}
-.nmain .nsection1 {
-  background-color: #041d30;
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  min-height: 500px;
-}
-.nmain .nsection1 .carousel {
-  padding: 50px;
-  width: 100%;
-}
-.nmain .nsection2 {
+/*---------------------------------- CONTACTO.HTML ----------------------------------*/
+/*-------------- FORM ------------------*/
+.contenedorForm {
   display: flex;
   width: 100vw;
   padding: 10px;
   margin-top: 10px;
   background-color: #041d30;
 }
-.nmain .nsection2 form {
+
+form {
   display: flex;
   flex-direction: column;
 }
-.nmain .nsection2 form div {
+
+form div {
   display: flex;
 }
-.nmain .nsection2 form div label {
+
+form div label {
   text-transform: uppercase;
   width: 500px;
   color: whitesmoke;
 }
-.nmain .nsection2 form div input {
+
+form div input {
   display: flex;
   justify-content: left;
 }
-.nmain .nsection2 form button {
+
+form button {
   max-height: 100px;
 }
 
+/*-------------- SECTION1 contacto ------------------*/
+.nsection1 {
+  background-color: #041d30;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  min-height: 500px;
+}
+
+.carousel {
+  padding: 50px;
+  width: 100%;
+}
+
+/*----------------------- RECOMENDADO -----------------------*/
 .recomendadomain {
   background-color: #041d30;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .recomendadomain section {
   display: flex;
   flex-direction: row;
 }
+
 .recomendadomain section div {
   margin: 10px;
 }
 
-/* MEDIA QUERIES - Ordenados de de mayor a menor (px)  */
+/*----------------------- FOOTER -----------------------*/
+.footer {
+  grid-area: footer;
+  background-color: #02101b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  width: 100vw;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer ul li a {
+  color: floralwhite;
+  text-decoration: wavy;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+
+.footer ul li a:hover {
+  transition: all 0, 2;
+  color: #eb5858;
+}
+
+.footer div {
+  display: flex;
+}
+
+.footer div a {
+  margin: 5px;
+  height: 40px;
+  width: 40px;
+}
+
+.igicon {
+  background-image: url(../multimedia/images/logoig.png);
+  background-size: cover;
+}
+
+.twicon {
+  background-image: url(../multimedia/images/logotw.png);
+  background-size: cover;
+}
+
+.wpicon {
+  background-image: url(../multimedia/images/logowp.png);
+  background-size: cover;
+}
+
+/*---------------------------------- MEDIA QUERIES -----------------------------------*/
 @media (max-width: 1180px) {
   .recomendadomain section {
     flex-direction: column;
@@ -525,6 +600,7 @@
     flex-direction: column;
     align-items: center;
   }
+
   .section2 div {
     flex-direction: column;
   }
@@ -578,36 +654,6 @@
     flex-direction: column;
     margin-left: 20px;
   }
-}
-.footer {
-  grid-area: footer;
-  background-color: #02101b;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px;
-  width: 100vw;
-}
-.footer ul {
-  list-style: none;
-}
-.footer ul li a {
-  color: floralwhite;
-  text-decoration: wavy;
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-}
-.footer ul li a:hover {
-  transition: all 0, 2;
-  color: #eb5858;
-}
-.footer div {
-  display: flex;
-}
-.footer div a img {
-  margin: 5px;
-  height: 40px;
-  width: 40px;
 }
 
 /*# sourceMappingURL=styles.css.map */
