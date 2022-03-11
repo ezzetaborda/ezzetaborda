@@ -37,6 +37,7 @@
                     font-size: 40px;
                     font-family: $herofont;
                     text-transform: uppercase;
+                    text-align: center;
                     color: rgb(0, 0, 0, 0.2);
                     text-shadow: black 0.1em 0.1em 0.5em;
                     -webkit-text-stroke-width: 1px;
@@ -212,7 +213,6 @@
             grid-area: section5;
             display: flex;
             width: 100vw;
-            background-color: $color2;
             align-items: center;
             justify-content: center;
             flex-direction: column;
@@ -227,7 +227,6 @@
             }
             div{
                 display: flex;
-                flex-direction: row;
                 img{
                     height: 400px;
                     width: 300px;
@@ -316,6 +315,9 @@
             div{
                 width: 90%;
             }
+            .twsection2parrafo{
+                color: wheat;
+            }
         }
         .igtwsection3 { 
             grid-area: igtwsection3;
@@ -324,6 +326,20 @@
             align-items: center;
             padding: 10px;
             background-color: $color2;
+            .twsection3titulo{
+                font-size: 25px;
+                font-family: $rubik;
+                color: rgb(255, 255, 255);
+                text-transform: uppercase;
+                -webkit-text-stroke-width: 1.5px;
+                -webkit-text-stroke-color: rgb(0, 0, 0);
+            }
+            .twsection3parrafo{
+                font-size: 25px;
+                font-family: $roboto;
+                margin: 50px;
+                color: black;
+            }
             .igtwsection3titulo{
                 h2{
                     font-size: 25px;
@@ -360,6 +376,20 @@
                 }
             
             }
+            .twsection4parrafo{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 2%;
+                width: 50%;
+                background-color: $color3;
+                p{
+                    font-size: 25px;
+                    font-family: $roboto;
+                    margin: 20px;
+                    color: black;
+                }
+            }
             .igtwsection4parrafo{
                 display: flex;
                 align-items: center;
@@ -371,19 +401,21 @@
                     display: flex;
                     justify-content: center;
                 
+                }
             }
         }
         .igtwsection5 {
             grid-area: igtwsection5;
             display: flex;
+            flex-direction: row-reverse;
             width: 100vw;
-            background-color: $color3;
+            background-color: $color4;
             .igtwsection5titulo{
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 50%;
                 padding: 5%;
+                width: 50vw;
                 background-image: url(../multimedia/images/fondosection2.png);
                 background-size: cover;
                 h2{
@@ -398,13 +430,35 @@
             .igtwsection5parrafo{
                 display: flex;
                 align-items: center;
+                width: 50vw;
+                flex-direction: row-reverse;
                 justify-content: center;
-                width: 50%;
                 background-color: $color3;
                 padding: 2%;
+                p{
+                    font-size: 25px;
+                    font-family: $roboto;
+                    margin: 50px;
+                    color: black;
+                }
+                
+            }
+            .twsection5parrafo{
+                display: flex;
+                align-items: center;
+                width: 50vw;
+                flex-direction: row-reverse;
+                justify-content: center;
+                background-color: $color3;
+                padding: 2%;
+                p{
+                    font-size: 25px;
+                    font-family: $roboto;
+                    margin: 20px;
+                    color: black;
+                }
             }
         }
-    }   
 }
 
 .nmain{
@@ -414,7 +468,7 @@
         display: flex;
         justify-content: center;
         width: 100vw;
-        min-height: 500px;
+        height: auto;
         .carousel{
             padding: 50px;
             width: 100%;
@@ -423,18 +477,19 @@
     }
     .nsection2{
         display: flex;
+        justify-content: center;
         width: 100vw;
         padding: 10px;
         margin-top: 10px;
         background-color: $color2;
         form{
             display: flex;
+            width: 60%;
             flex-direction: column;
             div{
                 display: flex;
                 label{
                     text-transform: uppercase;
-                    width: 500px;
                     color: whitesmoke;
                 }
                 input{
@@ -450,6 +505,14 @@
 }
 
 .recomendadomain{
+    h2{
+        font-size: 25px;
+        font-family: $rubik;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        -webkit-text-stroke-width: 1.5px;
+        -webkit-text-stroke-color: rgb(0, 0, 0);
+    }
     background-color: $color2;
     display: flex;
     flex-direction: column;
@@ -465,16 +528,21 @@
 }
 
 /* MEDIA QUERIES - Ordenados de de mayor a menor (px)  */
+
 @media (max-width: 1180px) {
     .recomendadomain section{
         flex-direction: column;
     }
-} 
+}    
+ 
 @media (max-width: 1080px) {
-    .section5 div{
-        flex-direction: column;
+    .section5{
+        div{
+            flex-direction: column;
+        }
     }
 }
+
 @media (max-width: 1020px) {
 
     .igtwsection1 div{
@@ -499,6 +567,7 @@
     }
 
 }
+
 @media (max-width: 920px){
 
     .section0 div{
@@ -508,11 +577,13 @@
      .section2{
         flex-direction: column;
         align-items: center;
-        div{
-            flex-direction: column;
-        }
+    }
+
+    .section2 div{
+        flex-direction: column;
     }
 }
+
 @media (max-width: 720px){
     .header div nav{
 
@@ -522,20 +593,27 @@
         flex-direction: column;
         align-items: center;
     }
-    .igtwsection4parrafo{
-       width: 100%;
-    }
     .igtwsection4titulo{
-       width: 100%;
+        width: 100% !important;
+     }
+    .igtwsection4parrafo{
+       width: 100% !important;
     }
+    .twsection4parrafo{
+        width: 100% !important;
+    }
+
     .igtwsection5{
-       flex-direction: column;
+       flex-direction: column !important;
    }
-   .igtwsection5parrafo{
-       width: 100%;
-    }
     .igtwsection5titulo{
-       width: 100%;
+       width: 100% !important;
+    }
+    .igtwsection5parrafo{
+        width: 100% !important;
+     }
+    .twsection5parrafo{
+        width: 100% !important;
     }
 }
 
@@ -553,7 +631,9 @@
     .recomendadomain section div iframe{
         max-width: 300px;
     }
-} 
+}   
+
+
 @media (max-width: 400px){
     .footer{
         justify-content: center;

@@ -77,6 +77,7 @@
   font-size: 40px;
   font-family: "Alfa Slab One", cursive;
   text-transform: uppercase;
+  text-align: center;
   color: rgba(0, 0, 0, 0.2);
   text-shadow: black 0.1em 0.1em 0.5em;
   -webkit-text-stroke-width: 1px;
@@ -244,7 +245,6 @@
   grid-area: section5;
   display: flex;
   width: 100vw;
-  background-color: #041d30;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -260,7 +260,6 @@
 }
 .bodydiv .section5 div {
   display: flex;
-  flex-direction: row;
 }
 .bodydiv .section5 div img {
   height: 400px;
@@ -342,6 +341,9 @@
 .igtwsections .igtwsection2 div {
   width: 90%;
 }
+.igtwsections .igtwsection2 .twsection2parrafo {
+  color: wheat;
+}
 .igtwsections .igtwsection3 {
   grid-area: igtwsection3;
   display: flex;
@@ -349,6 +351,20 @@
   align-items: center;
   padding: 10px;
   background-color: #041d30;
+}
+.igtwsections .igtwsection3 .twsection3titulo {
+  font-size: 25px;
+  font-family: "Rubik", sans-serif;
+  color: white;
+  text-transform: uppercase;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+}
+.igtwsections .igtwsection3 .twsection3parrafo {
+  font-size: 25px;
+  font-family: "Roboto", sans-serif;
+  margin: 50px;
+  color: black;
 }
 .igtwsections .igtwsection3 .igtwsection3titulo h2 {
   font-size: 25px;
@@ -383,6 +399,20 @@
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: black;
 }
+.igtwsections .igtwsection4 .twsection4parrafo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+  width: 50%;
+  background-color: #ff3c00;
+}
+.igtwsections .igtwsection4 .twsection4parrafo p {
+  font-size: 25px;
+  font-family: "Roboto", sans-serif;
+  margin: 20px;
+  color: black;
+}
 .igtwsections .igtwsection4 .igtwsection4parrafo {
   display: flex;
   align-items: center;
@@ -395,22 +425,23 @@
   display: flex;
   justify-content: center;
 }
-.igtwsections .igtwsection4 .igtwsection5 {
+.igtwsections .igtwsection5 {
   grid-area: igtwsection5;
   display: flex;
+  flex-direction: row-reverse;
   width: 100vw;
-  background-color: #ff3c00;
+  background-color: #02101b;
 }
-.igtwsections .igtwsection4 .igtwsection5 .igtwsection5titulo {
+.igtwsections .igtwsection5 .igtwsection5titulo {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50%;
   padding: 5%;
+  width: 50vw;
   background-image: url(../multimedia/images/fondosection2.png);
   background-size: cover;
 }
-.igtwsections .igtwsection4 .igtwsection5 .igtwsection5titulo h2 {
+.igtwsections .igtwsection5 .igtwsection5titulo h2 {
   font-size: 25px;
   font-family: "Rubik", sans-serif;
   color: white;
@@ -418,13 +449,35 @@
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: black;
 }
-.igtwsections .igtwsection4 .igtwsection5 .igtwsection5parrafo {
+.igtwsections .igtwsection5 .igtwsection5parrafo {
   display: flex;
   align-items: center;
+  width: 50vw;
+  flex-direction: row-reverse;
   justify-content: center;
-  width: 50%;
   background-color: #ff3c00;
   padding: 2%;
+}
+.igtwsections .igtwsection5 .igtwsection5parrafo p {
+  font-size: 25px;
+  font-family: "Roboto", sans-serif;
+  margin: 50px;
+  color: black;
+}
+.igtwsections .igtwsection5 .twsection5parrafo {
+  display: flex;
+  align-items: center;
+  width: 50vw;
+  flex-direction: row-reverse;
+  justify-content: center;
+  background-color: #ff3c00;
+  padding: 2%;
+}
+.igtwsections .igtwsection5 .twsection5parrafo p {
+  font-size: 25px;
+  font-family: "Roboto", sans-serif;
+  margin: 20px;
+  color: black;
 }
 
 .nmain {
@@ -435,7 +488,7 @@
   display: flex;
   justify-content: center;
   width: 100vw;
-  min-height: 500px;
+  height: auto;
 }
 .nmain .nsection1 .carousel {
   padding: 50px;
@@ -443,6 +496,7 @@
 }
 .nmain .nsection2 {
   display: flex;
+  justify-content: center;
   width: 100vw;
   padding: 10px;
   margin-top: 10px;
@@ -450,6 +504,7 @@
 }
 .nmain .nsection2 form {
   display: flex;
+  width: 60%;
   flex-direction: column;
 }
 .nmain .nsection2 form div {
@@ -457,7 +512,6 @@
 }
 .nmain .nsection2 form div label {
   text-transform: uppercase;
-  width: 500px;
   color: whitesmoke;
 }
 .nmain .nsection2 form div input {
@@ -473,6 +527,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.recomendadomain h2 {
+  font-size: 25px;
+  font-family: "Rubik", sans-serif;
+  color: white;
+  text-transform: uppercase;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
 }
 .recomendadomain section {
   display: flex;
@@ -525,6 +587,7 @@
     flex-direction: column;
     align-items: center;
   }
+
   .section2 div {
     flex-direction: column;
   }
@@ -539,24 +602,32 @@
     align-items: center;
   }
 
-  .igtwsection4parrafo {
-    width: 100%;
+  .igtwsection4titulo {
+    width: 100% !important;
   }
 
-  .igtwsection4titulo {
-    width: 100%;
+  .igtwsection4parrafo {
+    width: 100% !important;
+  }
+
+  .twsection4parrafo {
+    width: 100% !important;
   }
 
   .igtwsection5 {
-    flex-direction: column;
-  }
-
-  .igtwsection5parrafo {
-    width: 100%;
+    flex-direction: column !important;
   }
 
   .igtwsection5titulo {
-    width: 100%;
+    width: 100% !important;
+  }
+
+  .igtwsection5parrafo {
+    width: 100% !important;
+  }
+
+  .twsection5parrafo {
+    width: 100% !important;
   }
 }
 @media (max-width: 650px) {
