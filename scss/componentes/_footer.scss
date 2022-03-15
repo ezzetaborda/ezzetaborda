@@ -14,10 +14,10 @@
                 text-decoration: wavy;
                 font-family: "Oswald", sans-serif;
                 text-transform: uppercase;
-              }
-            a:hover{
-                transition: all 0, 2;
-                color: #eb5858;
+                &:hover{
+                    transition: all 0, 2;
+                    color: #eb5858;
+                }
             }
         }
       }
